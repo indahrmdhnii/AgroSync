@@ -201,7 +201,7 @@ function hpKerangka() {
     <div class="baris-balon" id="hp-baris-balon">
       <button class="lampu" id="hp-lampu" aria-label="Saran hari ini">${bohlamSVG()}<span class="lbl" id="hp-lampu-lbl">Saran</span><span class="seru" id="hp-lampu-seru" hidden>!</span></button>
       <div class="balon" id="hp-balon" role="status">
-        <div class="salam" id="hp-salam">Selamat pagi, Sari!</div>
+        <div class="salam" id="hp-salam">Selamat pagi!</div>
         <div class="pesan"><span id="hp-balon-ikon" style="color:#2E7D32">${ikon('centang')}</span><span id="hp-balon-teks">Kebunmu sehat hari ini.</span></div>
         <div class="petunjuk" id="hp-balon-petunjuk">Ketuk tanaman untuk detail.</div>
         <button class="btn-langkah" id="hp-btn-langkah" hidden>${ikon('langkah')}Lihat langkah</button>
@@ -428,7 +428,7 @@ function renderHP(paksa = false) {
   hpTampilLayar();
   const waspada = S.status === 'waspada';
   // Bar atas & balon
-  $hp('hp-salam').textContent = `${sapaan()}, Sari!`;
+  $hp('hp-salam').textContent = `${sapaan()}!`;
   $hp('hp-jam').textContent = jamSekarang();
   $hp('hp-jam-2').textContent = jamSekarang();
   $hp('hp-balon').classList.toggle('waspada', waspada);
