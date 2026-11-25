@@ -78,6 +78,20 @@ node cek/pilih.js 390 844 dark PH                   # pilih pemandu dan tema
 
 Screenshot hasil tes tersimpan di `cek/` (tidak ikut di-commit).
 
+## Deploy
+
+Halaman ini statis (satu file `dist/index.html`), jadi tidak perlu proses build di server.
+
+**Vercel**: impor repositori ini. `vercel.json` sudah mengarahkan Vercel ke folder `dist`,
+jadi biarkan Framework Preset = Other dan kosongkan Build Command.
+Kalau sebelumnya Output Directory di Project Settings pernah diisi lain, ubah jadi `dist`.
+
+**GitHub Pages**: Settings → Pages → Deploy from a branch → `main` / root,
+lalu buka `https://<username>.github.io/<repo>/dist/`.
+
+Setiap kali `src/` diubah, jalankan lagi `python3 build.py src dist/index.html`
+lalu commit `dist/index.html`.
+
 ## Catatan teknis
 
 - Library dari CDN: Three.js r128 (cdnjs) dan huruf Fredoka, Inter, Poppins (Google Fonts).
