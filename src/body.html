@@ -1,0 +1,359 @@
+<script>try{var t=localStorage.getItem('agrosync-tema');document.documentElement.dataset.theme=t==='dark'?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+<a class="sr-only" href="#demo">Langsung ke demo</a>
+<header class="nav" id="atas">
+  <div class="wadah">
+    <a class="merek" href="#atas" aria-label="AgroSync, ke atas halaman"><span data-logo></span>AgroSync</a>
+    <ul class="nav-tautan">
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#fitur">Fitur</a></li>
+      <li><a href="#pilih" role="button" data-buka-pilih>Karakter</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <button class="pot-nav" id="pot-nav" type="button" aria-haspopup="dialog" aria-label="Hadiahmu"><span class="pot-gambar" id="pot-gambar"></span><span class="titik-baru" id="titik-baru" hidden></span></button>
+    <button class="tombol-tema" id="tombol-tema" type="button" aria-label="Ganti ke mode gelap"><svg class="ikon-tema" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><mask id="mask-tema-1"><rect x="-2" y="-2" width="28" height="28" fill="#fff"/><circle cx="17.6" cy="6.4" r="6.4" fill="#000"/></mask></defs><g class="matahari"><circle cx="12" cy="12" r="4.6" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M5.1 18.9l1.6-1.6M17.3 6.7l1.6-1.6"/></g></g><g class="bulan"><circle cx="11.6" cy="12.6" r="8.6" fill="currentColor" mask="url(#mask-tema-1)"/></g></svg></button>
+    <a class="tombol tombol-utama tombol-kecil tombol-nav" href="#demo">Coba sekarang</a>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="menu-hp" aria-label="Buka menu"><span data-ikon="menu"></span></button>
+  </div>
+  <nav class="menu-hp" id="menu-hp" hidden aria-label="Menu">
+    <div class="wadah">
+      <ul>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#fitur">Fitur</a></li>
+        <li><a href="#pilih" role="button" data-buka-pilih>Karakter</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a class="tombol tombol-utama" href="#demo">Coba sekarang</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="judul-hero">
+    <div class="intro" id="intro"></div>
+    <div class="wadah hero-teks">
+      <h1 id="judul-hero">Kebun hidroponikmu, <em>selalu terpantau.</em></h1>
+      <p class="lead">Cek air, nutrisi, dan tanaman dari handphone. AgroSync ngabarin kalau ada yang perlu diurus.</p>
+      <div class="hero-aksi">
+        <a class="tombol tombol-utama tombol-besar tombol-goyang" href="#demo"><span data-ikon="putar"></span>Coba sekarang</a>
+        <a class="tombol tombol-kedua tombol-besar" href="#pilih" role="button" data-buka-pilih>Pilih karakter</a>
+      </div>
+      <a class="isyarat-gulir" href="#masalah" aria-label="Gulir ke bawah"><span data-ikon="chevBawah"></span></a>
+    </div>
+  </section>
+
+  <section class="pita" id="masalah" aria-labelledby="judul-masalah">
+    <div class="wadah">
+      <div class="kepala-masalah">
+        <div class="kepala-bagian" data-muncul>
+          <span class="alis">Masalah umum</span>
+          <h2 class="judul-bagian" id="judul-masalah">Tiga hal yang sering bikin gagal panen</h2>
+          <p class="lead">Ketuk kartunya, lihat cara AgroSync bantu.</p>
+        </div>
+        <div class="maskot-masalah" id="maskot-masalah" aria-hidden="true" data-tahap="0">
+          <span class="gelembung-masalah" id="gelembung-masalah">Pernah ngalamin?</span>
+          <div class="maskot-masalah-gambar" id="maskot-masalah-gambar"></div>
+        </div>
+      </div>
+      <div class="kartu-grid">
+        <button class="kartu-bos" type="button" aria-pressed="false" aria-label="Masalah: pH berubah. Ketuk untuk lihat solusinya" data-muncul style="--i:0">
+          <span class="isi-balik">
+            <span class="sisi depan"><span class="ilus" data-ilus="ph"></span><b>pH berubah</b><span class="petunjuk-kartu" aria-hidden="true"><span data-ikon="tangan"></span>Lihat solusi</span></span>
+            <span class="sisi belakang"><span class="kalah">Beres!</span><span class="notif-contoh"><span class="ap" data-logo-kecil></span><span><b>pH air naik ke 7,2</b>Ketuk untuk lihat langkah</span></span><b>Kabar lebih awal</b></span>
+          </span>
+          <span class="cek-pop" aria-hidden="true"><span data-ikon="centang"></span></span>
+        </button>
+        <button class="kartu-bos" type="button" aria-pressed="false" aria-label="Masalah: Air cepat habis. Ketuk untuk lihat solusinya" data-muncul style="--i:1">
+          <span class="isi-balik">
+            <span class="sisi depan"><span class="ilus" data-ilus="air"></span><b>Air cepat habis</b><span class="petunjuk-kartu" aria-hidden="true"><span data-ikon="tangan"></span>Lihat solusi</span></span>
+            <span class="sisi belakang"><span class="kalah">Beres!</span><span class="siram-contoh"><span data-ikon="tetes"></span></span><b>Siram dari mana aja</b></span>
+          </span>
+          <span class="cek-pop" aria-hidden="true"><span data-ikon="centang"></span></span>
+        </button>
+        <button class="kartu-bos" type="button" aria-pressed="false" aria-label="Masalah: Bingung harus ngapain. Ketuk untuk lihat solusinya" data-muncul style="--i:2">
+          <span class="isi-balik">
+            <span class="sisi depan"><span class="ilus" data-ilus="bingung"></span><b>Bingung harus ngapain</b><span class="petunjuk-kartu" aria-hidden="true"><span data-ikon="tangan"></span>Lihat solusi</span></span>
+            <span class="sisi belakang"><span class="kalah">Beres!</span><span class="langkah-contoh"><span><i>1</i>Tambah air</span><span><i>2</i>Tunggu 15 menit</span><span><i>3</i>Cek lagi</span></span><b>Langkah yang jelas</b></span>
+          </span>
+          <span class="cek-pop" aria-hidden="true"><span data-ikon="centang"></span></span>
+        </button>
+      </div>
+      <a class="strip-beres" id="strip-beres" href="#demo" hidden><span class="strip-ikon"><span data-ikon="centangPolos"></span></span><span>Semua beres! <b>Lihat cara kerjanya</b></span><span data-ikon="chevBawah"></span></a>
+    </div>
+  </section>
+
+  <section class="pita demo" id="demo" aria-labelledby="judul-demo">
+    <div class="wadah">
+      <div class="demo-kepala" data-muncul>
+        <div class="kepala-bagian" style="margin-bottom:0">
+          <span class="alis">How it works</span>
+          <h2 class="judul-bagian" id="judul-demo">Ayo coba dulu</h2>
+          <p class="lead">Pencet di handphone, kebunnya ikut gerak.</p>
+        </div>
+        <span class="label-simulasi"><span data-ikon="info"></span>Simulasi, data contoh</span>
+      </div>
+
+      <div class="demo-kendali">
+        <button class="tombol tombol-kedua tombol-kecil tombol-putar" id="putar" type="button" aria-pressed="false"><span data-ikon="putar"></span><span>Putar otomatis</span></button>
+        <div class="pov-toggle" role="group" aria-label="Pilih tampilan">
+          <button type="button" data-pov="keduanya" aria-pressed="true">Both</button>
+          <button type="button" data-pov="hp" aria-pressed="false">Handphonemu</button>
+          <button type="button" data-pov="kebun" aria-pressed="false">Kebunmu</button>
+        </div>
+        <button class="saklar-pip" id="saklar-pip" type="button" aria-pressed="false"><span class="knop" aria-hidden="true"></span>Handphone mini</button>
+      </div>
+
+      <div class="demo-panggung" id="panggung" data-pov="keduanya">
+        <div class="panel-hp" id="panel-hp">
+          <div class="hp-luar" id="hp-luar">
+            <div class="hp" id="hp" role="group" aria-label="Simulasi aplikasi AgroSync di handphone">
+              <div class="hp-layar" id="hp-layar"></div>
+            </div>
+          </div>
+          <button class="tombol tombol-kedua tombol-kecil" id="perbesar-hp" type="button" hidden style="position:absolute;inset:0;opacity:0">Perbesar handphone</button>
+        </div>
+        <div class="panel-kebun" id="panel-kebun">
+          <span class="judul-panel"><span data-ikon="daun"></span>Di kebun</span>
+          <span class="petunjuk-putar" id="petunjuk-putar">Geser untuk memutar</span>
+          <canvas id="kanvas" tabindex="0" role="img" aria-label="Kebun hidroponik 3D di dalam greenhouse, lengkap dengan papan tanam, bak air, galon Air Bersih, dirigen Nutrisi A dan B, kamera kebun, dan dua maskot. Geser ke samping atau pakai tombol panah untuk memutar." aria-describedby="narasi"></canvas>
+          <div id="datar" hidden></div>
+          <span class="label3d" id="lbl-sensor" data-anchor="sensor-ph" hidden><span class="titik"></span><span class="isi">pH 6,1</span></span>
+          <span class="label3d" id="lbl-air" data-anchor="bak" hidden><span class="titik"></span><span class="isi">Air 34%</span></span>
+          <span class="label3d" id="lbl-hitung" data-anchor="pompa" hidden><span class="isi">0:30</span></span>
+          <span class="label3d" id="lbl-kamera" data-anchor="kamera" hidden><span class="isi">Memotret lubang 5</span></span>
+          <span class="penanda-wadah" id="penanda-wadah" hidden aria-hidden="true"></span>
+          <div class="chip-wadah-baris" id="chip-wadah-baris" role="group" aria-label="Intip isi penampung">
+            <button class="chip-wadah" type="button" data-wadah="air"><span class="titik-w" style="background:#2F8FE0"></span>Air Bersih</button>
+            <button class="chip-wadah" type="button" data-wadah="nutA"><span class="titik-w" style="background:#2FA24E"></span>Nutrisi A</button>
+            <button class="chip-wadah" type="button" data-wadah="nutB"><span class="titik-w" style="background:#D9443B"></span>Nutrisi B</button>
+          </div>
+          <div class="info-wadah" id="info-wadah" hidden role="dialog" aria-labelledby="info-wadah-judul">
+            <button class="tutup-info" id="tutup-info" type="button" aria-label="Tutup"><span data-ikon="silang"></span></button>
+            <div class="info-kepala"><span class="info-ikon" id="info-ikon"></span><span><b id="info-wadah-judul">Nutrisi A</b><small id="info-wadah-sub">Dirigen hijau</small></span></div>
+            <div class="zat" id="info-zat"></div>
+            <p id="info-manfaat"></p>
+          </div>
+          <div class="kilat" id="kilat"></div>
+        </div>
+      </div>
+
+      <div class="demo-bawah">
+        <ol class="stepper" id="stepper" aria-label="Langkah demo">
+          <li><button type="button" data-adegan="1"><span class="no">1</span><span class="nm">Sehat</span><span class="bintang" aria-hidden="true"></span></button></li>
+          <li><button type="button" data-adegan="2"><span class="no">2</span><span class="nm">Ada masalah</span><span class="bintang" aria-hidden="true"></span></button></li>
+          <li><button type="button" data-adegan="3"><span class="no">3</span><span class="nm">Siram</span><span class="bintang" aria-hidden="true"></span></button></li>
+          <li><button type="button" data-adegan="4"><span class="no">4</span><span class="nm">Kamera</span><span class="bintang" aria-hidden="true"></span></button></li>
+          <li><button type="button" data-adegan="5"><span class="no">5</span><span class="nm">Panen</span><span class="bintang" aria-hidden="true"></span></button></li>
+        </ol>
+        <div class="penjelasan" id="penjelasan">
+          <div class="baris-atas">
+            <h3 id="pj-judul">Langkah 1 dari 5 · Kebun lagi sehat</h3>
+            <span class="pj-tombol"><button class="tombol tombol-kedua tombol-kecil" id="pj-panduan" type="button">Lewati tutorial</button><button class="tombol tombol-kedua tombol-kecil" id="pj-ulang" type="button"><span data-ikon="ulang"></span>Ulang</button></span>
+          </div>
+          <p class="sr-only" id="pj-ajak"><span class="isi">Ketuk meteran pH di handphone, yuk.</span></p>
+          <div class="sr-only">
+            <div><span class="ik"><span data-ikon="hp"></span></span><span><b>Di handphone</b><span id="pj-hp"></span></span></div>
+            <div><span class="ik"><span data-ikon="daun"></span></span><span><b>Di kebun</b><span id="pj-kebun"></span></span></div>
+          </div>
+          <div class="aksi-adegan" id="pj-aksi"></div>
+        </div>
+        <p class="sr-only" id="narasi" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pita" id="fitur" aria-labelledby="judul-fitur">
+    <div class="wadah">
+      <div class="kepala-bagian" data-muncul>
+        <span class="alis">Fitur</span>
+        <h2 class="judul-bagian" id="judul-fitur">Yang bisa AgroSync lakukan</h2>
+        <p class="lead">Pencet buat coba.</p>
+      </div>
+      <div class="fitur-grid">
+        <article class="kartu-pu" data-muncul style="--i:0;--w:var(--mint)">
+          <h3>Pantau kondisi</h3>
+          <div class="wg wg-radar" id="wg-radar"></div>
+          <button class="tombol tombol-kedua tombol-kecil" type="button" data-wg="radar"><span data-ikon="ulang"></span>Pindai</button>
+        </article>
+        <article class="kartu-pu" data-muncul style="--i:1;--w:var(--peach)">
+          <h3>Notifikasi</h3>
+          <div class="wg wg-notif" id="wg-notif"><div class="layar-kunci"><span class="jam-kunci">13.20</span><button class="notif-kunci" type="button" id="notif-kunci" hidden><span class="ap" data-logo-kecil></span><span><b>Air bak tinggal 34%</b>Ketuk buat lihat langkah</span></button><ol class="langkah-kunci" id="langkah-kunci" hidden><li>Tambah air bersih</li><li>Tunggu 15 menit</li><li>Cek lagi</li></ol></div></div>
+          <button class="tombol tombol-kedua tombol-kecil" type="button" data-wg="notif"><span data-ikon="lonceng"></span>Kirim notif</button>
+        </article>
+        <article class="kartu-pu" data-muncul style="--i:2;--w:var(--sage)">
+          <h3>Siram jarak jauh</h3>
+          <div class="wg wg-siram" id="wg-siram"><div class="bak-mini"><i id="bak-mini-isi"></i><span id="bak-mini-teks">34%</span></div>
+            <button class="tombol-siram" type="button" data-wg="siram" aria-label="Siram"><svg class="cincin-siram" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="54"/><circle class="isi-siram" cx="60" cy="60" r="54"/></svg><span data-ikon="tetes"></span><b>Siram!</b></button></div>
+        </article>
+        <article class="kartu-pu" data-muncul style="--i:3;--w:var(--peach)">
+          <h3>Kamera kebun</h3>
+          <div class="wg wg-kamera" id="wg-kamera"><div class="jendela-kamera"><span class="sudut"></span><div class="foto-kamera" id="foto-kamera"></div><div class="kilat-kamera" id="kilat-kamera"></div></div></div>
+          <button class="tombol tombol-kedua tombol-kecil" type="button" data-wg="kamera"><span data-ikon="kamera"></span>Jepret</button>
+        </article>
+        <article class="kartu-pu" data-muncul style="--i:4;--w:var(--mint)">
+          <h3>Riwayat grafik</h3>
+          <div class="wg wg-grafik" id="wg-grafik"></div>
+          <div class="segmen-mini" role="group" aria-label="Rentang grafik"><button type="button" data-rentang="24" aria-pressed="true">24 jam</button><button type="button" data-rentang="7" aria-pressed="false">7 hari</button></div>
+        </article>
+        <article class="kartu-pu" data-muncul style="--i:5;--w:var(--sage)">
+          <h3>Pantau panen</h3>
+          <div class="wg wg-tumbuh" id="wg-tumbuh"><button class="tanaman-tumbuh" type="button" data-wg="tumbuh" aria-label="Siram tanaman supaya tumbuh"></button><span class="chip-level" id="chip-level">Semai</span></div>
+          <p class="kecil-pu">Ketuk tanamannya</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pita sehari" id="sehari" aria-labelledby="judul-sehari">
+    <div class="wadah">
+      <div class="kepala-bagian" data-muncul>
+        <span class="alis">Sehari-hari</span>
+        <h2 class="judul-bagian" id="judul-sehari">Sehari bareng AgroSync</h2>
+      </div>
+      <div class="misi-sehari" id="misi-sehari" role="status" aria-live="polite">
+        <span class="misi-sehari-ikon" id="misi-sehari-ikon"></span>
+        <span class="misi-sehari-teks" id="misi-sehari-teks">Misi: ketuk keempat momen</span>
+        <span class="misi-sehari-titik" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      </div>
+      <div class="hari" id="hari" data-momen-aktif="0">
+        <div class="lintasan" aria-hidden="true"><span class="matahari-kecil" id="matahari-kecil"></span></div>
+        <ol class="momen-daftar">
+          <li><button class="momen" type="button" data-momen="0" aria-pressed="true">
+            <span class="cek-momen" aria-hidden="true"></span>
+            <span class="baris-jam"><span class="jam">06.30</span></span><span class="judul-momen">Cek kebun sambil ngopi</span>
+            <span class="notif-mini"><span class="ap" data-logo-kecil></span><span><b>AgroSync</b>Kebunmu sehat hari ini.</span></span></button></li>
+          <li><button class="momen" type="button" data-momen="1" aria-pressed="false">
+            <span class="cek-momen" aria-hidden="true"></span>
+            <span class="baris-jam"><span class="jam">13.20</span></span><span class="judul-momen">Air menipis? Siram!</span>
+            <span class="notif-mini waspada"><span class="ap" data-logo-kecil></span><span><b>AgroSync</b>Air bak tinggal 34%.</span></span></button></li>
+          <li><button class="momen" type="button" data-momen="2" aria-pressed="false">
+            <span class="cek-momen" aria-hidden="true"></span>
+            <span class="baris-jam"><span class="jam">16.45</span></span><span class="judul-momen">Intip tanaman</span>
+            <span class="notif-mini"><span class="ap" data-logo-kecil></span><span><b>AgroSync</b>Foto baru lubang 5 masuk.</span></span></button></li>
+          <li><button class="momen" type="button" data-momen="3" aria-pressed="false">
+            <span class="cek-momen" aria-hidden="true"></span>
+            <span class="baris-jam"><span class="jam">Sabtu</span></span><span class="judul-momen">Waktunya panen!</span>
+            <span class="notif-mini panen"><span class="ap" data-logo-kecil></span><span><b>AgroSync</b>5 tanaman siap dipetik.</span></span></button></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="pita" id="faq" aria-labelledby="judul-faq">
+    <div class="wadah">
+      <div class="kepala-bagian" data-muncul>
+        <span class="alis">Tanya jawab</span>
+        <h2 class="judul-bagian" id="judul-faq">Masih penasaran?</h2>
+        <p class="lead">Pilih pertanyaan, Tata dan Ago yang jawab.</p>
+      </div>
+      <div class="obrolan" data-muncul>
+        <div class="obrolan-panggung" aria-hidden="true">
+          <div class="maskot-bicara" data-siapa="semanggi"></div>
+          <div class="maskot-bicara" data-siapa="siA"></div>
+        </div>
+        <div class="obrolan-jendela">
+          <div class="obrolan-kepala"><span class="avatar-ganda"><span data-maskot-kecil="semanggi"></span><span data-maskot-kecil="siA"></span></span><span><b>Tata &amp; Ago</b><small><i class="titik-online"></i>online, siap jawab</small></span></div>
+          <div class="obrolan-isi" id="obrolan-isi" role="log" aria-live="polite" aria-label="Obrolan tanya jawab"></div>
+          <div class="obrolan-pilihan" id="obrolan-pilihan" role="group" aria-label="Pilih pertanyaan"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pita cta" id="mulai" aria-labelledby="judul-cta">
+    <div class="wadah">
+      <div style="display:grid;gap:16px" data-muncul>
+        <h2 id="judul-cta">Siap mulai berkebun?</h2>
+        <p class="lead" style="margin-top:0">Kebun segar, tanpa ribet.</p>
+      </div>
+      <div class="maskot-cta" aria-hidden="true"><span class="lompat-1" data-maskot="siA-senang"></span><span class="lompat-2" data-maskot="semanggi-angkat"></span></div>
+    </div>
+  </section>
+</main>
+
+<footer class="kaki">
+  <div class="wadah">
+    <a class="merek" href="#atas" style="font-size:18px"><span data-logo></span>AgroSync</a>
+    <p>© 2026 AgroSync</p>
+  </div>
+</footer>
+
+<div class="pencapaian" id="pencapaian" role="status" aria-live="polite" hidden>
+  <span class="pencapaian-ikon" id="pencapaian-ikon"></span>
+  <span class="pencapaian-isi"><small>Misi beres</small><b id="pencapaian-nama"></b><span class="pencapaian-hadiah" id="pencapaian-hadiah"></span></span>
+  <button class="pencapaian-lihat" id="pencapaian-lihat" type="button">Lihat</button>
+</div>
+
+<div class="hadiah-layar" id="hadiah-layar" hidden role="dialog" aria-modal="true" aria-labelledby="hadiah-judul">
+  <div class="hadiah-kotak">
+    <div class="hadiah-kepala">
+      <h2 id="hadiah-judul"><span data-emoji3d="hadiah"></span>Hadiahmu</h2>
+      <button class="hadiah-tutup" id="hadiah-tutup" type="button" aria-label="Tutup"><span data-ikon="silang"></span></button>
+    </div>
+    <div class="hadiah-isi">
+      <div class="hadiah-atas">
+        <section class="kartu-hadiah kartu-pot" aria-labelledby="judul-pot">
+          <h3 id="judul-pot">Kebun mini</h3>
+          <div class="pot-besar" id="pot-besar"></div>
+          <p id="pot-teks"></p>
+        </section>
+        <section class="kartu-hadiah kartu-lemari" aria-labelledby="lemari-judul">
+          <h3 id="lemari-judul">Lemari</h3>
+          <div class="lemari-maskot" id="lemari-maskot"></div>
+          <div class="lemari-aks" id="lemari-aks" role="group" aria-label="Aksesori, ketuk untuk pakai atau lepas"></div>
+        </section>
+      </div>
+      <section class="kartu-hadiah" aria-labelledby="judul-misi">
+        <h3 id="judul-misi">Misi</h3>
+        <ol class="daftar-misi" id="daftar-misi"></ol>
+      </section>
+      <section class="kartu-hadiah" aria-labelledby="judul-stiker">
+        <div class="kepala-stiker">
+          <div><h3 id="judul-stiker">Stiker WhatsApp</h3><p class="catatan-stiker"><span id="jumlah-stiker"></span> · PNG 512×512, tinggal masukin ke aplikasi pembuat stiker.</p></div>
+          <button class="tombol tombol-utama tombol-kecil" id="unduh-semua" type="button">Unduh semua (ZIP)</button>
+        </div>
+        <div class="filter-stiker" role="group" aria-label="Saring stiker">
+          <button type="button" data-filter-stiker="semua" aria-pressed="true">Semua</button>
+          <button type="button" data-filter-stiker="tata" aria-pressed="false">Tata</button>
+          <button type="button" data-filter-stiker="ago" aria-pressed="false">Ago</button>
+          <button type="button" data-filter-stiker="duo" aria-pressed="false">Berdua</button>
+        </div>
+        <div class="grid-stiker" id="grid-stiker"></div>
+        <p class="status-unduh" id="status-unduh" role="status" aria-live="polite"></p>
+      </section>
+      <button class="hadiah-ulang" id="hadiah-ulang" type="button">Mulai ulang hadiah</button>
+    </div>
+    <div class="pratinjau-stiker" id="pratinjau-stiker" hidden role="group" aria-label="Pratinjau stiker">
+      <button class="pratinjau-tutup" id="pratinjau-tutup" type="button" aria-label="Kembali ke album"><span data-ikon="kembali"></span></button>
+      <img class="pratinjau-gambar" id="pratinjau-gambar" alt="" width="512" height="512">
+      <p id="pratinjau-teks"></p>
+      <div class="pratinjau-aksi">
+        <button class="tombol tombol-kedua tombol-kecil" id="pratinjau-sebelum" type="button" aria-label="Stiker sebelumnya"><span data-ikon="kembali"></span></button>
+        <button class="tombol tombol-utama" id="pratinjau-unduh" type="button">Unduh PNG</button>
+        <button class="tombol tombol-kedua tombol-kecil" id="pratinjau-sesudah" type="button" aria-label="Stiker berikutnya"><span data-ikon="chevKanan"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pilih-layar" id="pilih-layar" hidden role="dialog" aria-modal="true" aria-labelledby="pilih-judul">
+  <div class="pilih-kotak">
+    <span class="alis">Pilih karakter</span>
+    <h2 id="pilih-judul">Siapa pemandumu?</h2>
+    <p class="pilih-lead">Dia yang nemenin kamu keliling.</p>
+    <div class="pilih-kartu-baris" id="pilih-kartu-baris">
+      <button class="pilih-kartu" type="button" data-pilih="tata"><span class="gelembung-hai" aria-hidden="true">Hai!</span><span class="pilih-gambar" data-gambar-pilih="tata"></span><b>Tata</b></button>
+      <button class="pilih-kartu" type="button" data-pilih="ago"><span class="gelembung-hai" aria-hidden="true">Halo!</span><span class="pilih-gambar" data-gambar-pilih="ago"></span><b>Ago</b></button>
+    </div>
+    <button class="pilih-lewati" type="button" id="pilih-lewati">Nanti aja</button>
+  </div>
+</div>
+
+<div class="penunjuk" id="penunjuk" hidden aria-hidden="true"><span class="penunjuk-riak" id="penunjuk-riak"></span><span class="penunjuk-tangan" id="penunjuk-tangan"></span><span class="penunjuk-gelembung" id="penunjuk-teks"></span></div>
+
+<div class="pemandu" id="pemandu" hidden>
+  <div class="pemandu-balon" id="pemandu-balon">
+    <span id="pemandu-teks" aria-live="polite">Hai!</span>
+    <button class="pemandu-tutup" id="pemandu-tutup" type="button" aria-label="Sembunyikan pemandu"><span data-ikon="silang"></span></button>
+  </div>
+  <button class="pemandu-maskot" id="pemandu-maskot" type="button" aria-label="Pemandu. Ketuk untuk dapat tips berkebun"></button>
+</div>

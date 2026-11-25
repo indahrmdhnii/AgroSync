@@ -1,0 +1,7 @@
+# hasil sementara build dan tes
+gabung.js
+cek/*.png
+cek/*.zip
+vendor/
+node_modules/
+.DS_Store

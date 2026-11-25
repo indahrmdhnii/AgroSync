@@ -1,0 +1,25 @@
+const { chromium } = require('playwright');
+const L = require('path').resolve(__dirname, '..');
+const [,, W = 1280, H = 900, n = 'TD'] = process.argv;
+(async () => {
+  const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist'] });
+  const hp = +W < 900;
+  const p = await (await b.newContext({ viewport: { width: +W, height: +H }, hasTouch: hp, isMobile: hp })).newPage();
+  await p.addInitScript(() => { try { localStorage.setItem('agrosync-karakter', 'tata'); } catch (e) {} });
+  const galat = []; p.on('pageerror', (e) => galat.push(e.message));
+  await p.route('https://cdnjs.cloudflare.com/**/three.min.js', (r) => r.fulfill({ path: L + '/vendor/three-r128.min.js', contentType: 'text/javascript' }));
+  await p.route('https://fonts.**/**', (r) => r.abort());
+  await p.goto('file://' + L + '/dist/index.html'); await p.waitForTimeout(2500);
+  await p.evaluate(() => document.getElementById('panggung').scrollIntoView({ block: 'start' })); await p.waitForTimeout(1000);
+  const cek = async (lbl) => { await p.screenshot({ path: `${L}/cek/${n}-${lbl}.png` }); console.log(n, lbl, JSON.stringify(await p.evaluate(() => ({ tampil: !document.getElementById('penunjuk').hidden, teks: document.getElementById('penunjuk-teks').textContent, tangan: !document.getElementById('penunjuk-tangan').hidden })))); };
+  await cek('1');
+  await p.click('#hp-m-ph'); await p.waitForTimeout(1200); await cek('2-lanjut');
+  await p.click('#pj-aksi [data-aksi="lanjut"]'); await p.waitForTimeout(1000);
+  await p.evaluate(() => document.getElementById('panggung').scrollIntoView({ block: 'start' })); await p.waitForTimeout(600);
+  await cek('3-simulasi');
+  await p.evaluate(() => mulaiAdegan(3)); await p.waitForTimeout(800);
+  await p.evaluate(() => document.getElementById('panggung').scrollIntoView({ block: 'start' })); await p.waitForTimeout(600);
+  await cek('4-pompa');
+  console.log(galat.join('\n') || 'tanpa galat');
+  await b.close();
+})();

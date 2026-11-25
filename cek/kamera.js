@@ -1,0 +1,20 @@
+const { chromium } = require('playwright');
+const L = require('path').resolve(__dirname, '..');
+(async () => {
+  const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist'] });
+  const p = await (await b.newContext({ viewport: { width: 1280, height: 900 } })).newPage();
+  await p.addInitScript(() => { try { localStorage.setItem('agrosync-karakter', 'tata'); } catch (e) {} });
+  p.on('pageerror', (e) => console.log('pageerror: ' + e.message));
+  await p.route('https://cdnjs.cloudflare.com/**/three.min.js', (r) => r.fulfill({ path: L + '/vendor/three-r128.min.js', contentType: 'text/javascript' }));
+  await p.route('https://fonts.**/**', (r) => r.abort());
+  await p.goto('file://' + L + '/dist/index.html'); await p.waitForTimeout(2500);
+  await p.evaluate(() => { document.getElementById('panggung').scrollIntoView({ block: 'start' }); mulaiAdegan(4); });
+  await p.waitForTimeout(1200);
+  await p.click('#kebun-hp .lubang-ketuk[data-n="5"]'); await p.waitForTimeout(700);
+  await p.click('#hp-buka-detail'); await p.waitForTimeout(900);
+  await p.click('#hp-ambil-foto'); await p.waitForTimeout(1300);
+  await p.locator('#panel-kebun').screenshot({ path: `${L}/cek/K-memotret.png` });
+  await p.waitForTimeout(450);
+  await p.locator('#panel-kebun').screenshot({ path: `${L}/cek/K-kilat.png` });
+  await b.close();
+})();
