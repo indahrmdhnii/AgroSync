@@ -940,7 +940,7 @@ function pasangBos() {
     else if (!semua) strip.hidden = true;
   };
   kartu.forEach((k, i) => {
-    const nama = k.querySelector('.depan > b').textContent, senjata = k.querySelector('.belakang > b').textContent;
+    const nama = k.querySelector('.depan > b').textContent, senjata = k.querySelector('.belakang > b').textContent, desk = k.querySelector('.desk-solusi').textContent;
     k.addEventListener('click', () => {
       if (k.getAttribute('aria-pressed') === 'true') {
         k.setAttribute('aria-pressed', 'false'); k.classList.remove('kena'); k.setAttribute('aria-label', `Masalah: ${nama}. Ketuk untuk lihat solusinya`);
@@ -952,7 +952,7 @@ function pasangBos() {
       percikDaun(r.left + r.width / 2, r.top + r.height * .4, 14);
       setTimeout(() => {
         k.setAttribute('aria-pressed', 'true');
-        k.setAttribute('aria-label', `${nama}. Solusinya: ${senjata}. Ketuk untuk balik`);
+        k.setAttribute('aria-label', `${nama}. Solusinya: ${senjata}. ${desk} Ketuk untuk balik`);
         kalah.add(i); segarTahap(true);
         if (kalah.size === kartu.length) buka('bos');
       }, GERAK_KURANG ? 0 : 650);

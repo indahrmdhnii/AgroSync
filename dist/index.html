@@ -668,7 +668,7 @@ section[id] { scroll-margin-top: 68px; }
 .pencapaian b { display: block; font-family: var(--font-judul); font-size: 19px; line-height: 1.2; }
 
 /* Kartu bos */
-.kartu-bos { position: relative; border: 0; padding: 0; background: transparent; cursor: pointer; perspective: 1100px; height: 310px; text-align: center; color: inherit; }
+.kartu-bos { position: relative; border: 0; padding: 0; background: transparent; cursor: pointer; perspective: 1100px; height: 340px; text-align: center; color: inherit; }
 .kartu-bos .isi-balik { position: absolute; inset: 0; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.3, .7, .3, 1); }
 .kartu-bos[aria-pressed="true"] .isi-balik { transform: rotateY(180deg); }
 .kartu-bos .sisi { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: var(--radius-l); display: grid; justify-items: center; align-content: center; gap: 12px; padding: 20px; border: 2.5px solid var(--garis-tebal); box-shadow: 0 6px 0 var(--garis-tebal); }
@@ -1109,6 +1109,19 @@ html.kunci-gulir { overflow: hidden; }
 .pencapaian-ikon .emoji3d { width: 40px; height: 40px; }
 .misi-sehari-ikon .emoji3d { width: 28px; height: 28px; }
 @media (max-width: 700px) { .pencapaian-ikon .emoji3d { width: 32px; height: 32px; } }
+
+/* Sisi belakang kartu masalah: solusi yang jelas */
+.kartu-bos .belakang { gap: 10px; padding: 18px 20px; }
+.label-solusi { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px 5px 8px; border-radius: 999px; background: var(--normal); color: #fff; font-family: var(--font-judul); font-weight: 600; font-size: 14px; }
+.label-solusi svg { width: 16px; height: 16px; }
+.kartu-bos .belakang > b { font-size: 20px; line-height: 1.2; }
+.desk-solusi { font-size: 14.5px; line-height: 1.45; color: var(--teks-2); max-width: 30ch; }
+.kartu-bos .belakang .siram-contoh { width: 72px; height: 72px; box-shadow: 0 5px 0 #1E5E94; }
+.kartu-bos .belakang .siram-contoh svg { width: 34px; height: 34px; }
+.kartu-bos .belakang .langkah-contoh { gap: 6px; }
+.kartu-bos .belakang .langkah-contoh span { padding: 5px 10px; font-size: 14px; }
+.kartu-bos .belakang .langkah-contoh i { width: 22px; height: 22px; font-size: 12px; }
+.kartu-bos .belakang .notif-contoh { padding: 8px 10px; }
 </style>
 </head>
 <body>
@@ -1172,21 +1185,21 @@ html.kunci-gulir { overflow: hidden; }
         <button class="kartu-bos" type="button" aria-pressed="false" aria-label="Masalah: pH berubah. Ketuk untuk lihat solusinya" data-muncul style="--i:0">
           <span class="isi-balik">
             <span class="sisi depan"><span class="ilus" data-ilus="ph"></span><b>pH berubah</b><span class="petunjuk-kartu" aria-hidden="true"><span data-ikon="tangan"></span>Lihat solusi</span></span>
-            <span class="sisi belakang"><span class="kalah">Beres!</span><span class="notif-contoh"><span class="ap" data-logo-kecil></span><span><b>pH air naik ke 7,2</b>Ketuk untuk lihat langkah</span></span><b>Kabar lebih awal</b></span>
+            <span class="sisi belakang"><span class="label-solusi"><span data-ikon="centangPolos"></span>Solusinya</span><span class="notif-contoh"><span class="ap" data-logo-kecil></span><span><b>pH air naik ke 7,2</b>Ketuk untuk lihat langkah</span></span><b>Kabar lebih awal</b><span class="desk-solusi">Begitu pH keluar batas aman, kamu langsung dapat notif plus langkah benerinnya.</span></span>
           </span>
           <span class="cek-pop" aria-hidden="true"><span data-ikon="centang"></span></span>
         </button>
         <button class="kartu-bos" type="button" aria-pressed="false" aria-label="Masalah: Air cepat habis. Ketuk untuk lihat solusinya" data-muncul style="--i:1">
           <span class="isi-balik">
             <span class="sisi depan"><span class="ilus" data-ilus="air"></span><b>Air cepat habis</b><span class="petunjuk-kartu" aria-hidden="true"><span data-ikon="tangan"></span>Lihat solusi</span></span>
-            <span class="sisi belakang"><span class="kalah">Beres!</span><span class="siram-contoh"><span data-ikon="tetes"></span></span><b>Siram dari mana aja</b></span>
+            <span class="sisi belakang"><span class="label-solusi"><span data-ikon="centangPolos"></span>Solusinya</span><span class="siram-contoh"><span data-ikon="tetes"></span></span><b>Siram dari mana aja</b><span class="desk-solusi">Sisa air kelihatan dari handphone. Tinggal nyalakan pompa air bersih, beres.</span></span>
           </span>
           <span class="cek-pop" aria-hidden="true"><span data-ikon="centang"></span></span>
         </button>
         <button class="kartu-bos" type="button" aria-pressed="false" aria-label="Masalah: Bingung harus ngapain. Ketuk untuk lihat solusinya" data-muncul style="--i:2">
           <span class="isi-balik">
             <span class="sisi depan"><span class="ilus" data-ilus="bingung"></span><b>Bingung harus ngapain</b><span class="petunjuk-kartu" aria-hidden="true"><span data-ikon="tangan"></span>Lihat solusi</span></span>
-            <span class="sisi belakang"><span class="kalah">Beres!</span><span class="langkah-contoh"><span><i>1</i>Tambah air</span><span><i>2</i>Tunggu 15 menit</span><span><i>3</i>Cek lagi</span></span><b>Langkah yang jelas</b></span>
+            <span class="sisi belakang"><span class="label-solusi"><span data-ikon="centangPolos"></span>Solusinya</span><span class="langkah-contoh"><span><i>1</i>Tambah air</span><span><i>2</i>Tunggu 15 menit</span><span><i>3</i>Cek lagi</span></span><b>Langkah yang jelas</b><span class="desk-solusi">Tiap masalah datang bareng langkah 1‑2‑3 pakai bahasa sehari‑hari.</span></span>
           </span>
           <span class="cek-pop" aria-hidden="true"><span data-ikon="centang"></span></span>
         </button>
@@ -4561,7 +4574,7 @@ function pasangBos() {
     else if (!semua) strip.hidden = true;
   };
   kartu.forEach((k, i) => {
-    const nama = k.querySelector('.depan > b').textContent, senjata = k.querySelector('.belakang > b').textContent;
+    const nama = k.querySelector('.depan > b').textContent, senjata = k.querySelector('.belakang > b').textContent, desk = k.querySelector('.desk-solusi').textContent;
     k.addEventListener('click', () => {
       if (k.getAttribute('aria-pressed') === 'true') {
         k.setAttribute('aria-pressed', 'false'); k.classList.remove('kena'); k.setAttribute('aria-label', `Masalah: ${nama}. Ketuk untuk lihat solusinya`);
@@ -4573,7 +4586,7 @@ function pasangBos() {
       percikDaun(r.left + r.width / 2, r.top + r.height * .4, 14);
       setTimeout(() => {
         k.setAttribute('aria-pressed', 'true');
-        k.setAttribute('aria-label', `${nama}. Solusinya: ${senjata}. Ketuk untuk balik`);
+        k.setAttribute('aria-label', `${nama}. Solusinya: ${senjata}. ${desk} Ketuk untuk balik`);
         kalah.add(i); segarTahap(true);
         if (kalah.size === kartu.length) buka('bos');
       }, GERAK_KURANG ? 0 : 650);
